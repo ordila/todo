@@ -9,7 +9,6 @@ export const getTask = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await axios.get("/todo");
-      console.log("response.data :>> ", response.data);
 
       return response.data;
     } catch (err) {
