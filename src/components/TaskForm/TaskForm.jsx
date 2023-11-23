@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "../../redux/api";
-import { selectItems } from "../../redux/taskSlice";
+import { selectItems } from "../../redux/select";
+
 import css from "./TaskForm.module.css";
 import Notiflix from "notiflix";
 const TaskForm = () => {

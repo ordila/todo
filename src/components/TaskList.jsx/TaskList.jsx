@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { selectItems } from "../../redux/taskSlice";
+import { selectItems } from "../../redux/select";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTask, getTask } from "../../redux/api";
 import { IoMdClose } from "react-icons/io";
