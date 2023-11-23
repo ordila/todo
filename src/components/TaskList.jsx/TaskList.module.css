@@ -1,0 +1,51 @@
+.list_item {
+  width: 385px;
+  margin: 0 auto 6px;
+  padding-left: 21px;
+  display: flex;
+  align-items: center;
+}
+.priority {
+  height: 30px;
+  width: 30px;
+
+  background-color: #ffd700;
+  border-radius: 3px;
+  color: #000;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo_text {
+  margin-left: 15px;
+  width: 265px;
+}
+.wrapper {
+  width: 385px;
+  border-bottom: 1px solid #ffd700;
+}
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.close_button {
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close_button_icon {
+  fill: #ffd700;
+  width: 30px;
+  height: 30px;
+}
+.close_button_icon:hover {
+  scale: 1.1;
+}

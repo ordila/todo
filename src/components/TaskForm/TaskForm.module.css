@@ -1,0 +1,61 @@
+.titleForm {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 14px;
+}
+
+.todo_text {
+  width: 192px;
+  height: 35px;
+  border-radius: 3px;
+  border-color: transparent;
+  padding-left: 10px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.todo_text::placeholder {
+  color: rgba(33, 33, 33, 0.7);
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.todo_priority {
+  width: 65px;
+  height: 35px;
+  border-radius: 3px;
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.todo_priority::placeholder {
+  color: rgba(33, 33, 33, 0.7);
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.todo_priority:focus {
+  text-align: center;
+}
+
+.form_button {
+  width: 100px;
+  padding: 6px 30px;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+  color: #ffd700;
+  text-align: center;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}

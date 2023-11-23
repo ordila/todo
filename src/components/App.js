@@ -3,6 +3,8 @@ import Layout from "./Layout/Layout";
 import TaskForm from "./TaskForm/TaskForm";
 import TaskList from "./TaskList.jsx/TaskList";
 import { selectError, selectIsLoading } from "../redux/taskSlice";
+import Loader from "./Loader/Loader";
+import Error from "./Error/Error";
 
 function App() {
   const isLoading = useSelector(selectIsLoading);
@@ -10,7 +12,8 @@ function App() {
   return (
     <Layout>
       <TaskForm></TaskForm>
-      {isLoading && !error && <b>Request in progress...</b>}
+      {isLoading && !error && <Loader></Loader>}
+      {error && <Error></Error>}
       <TaskList></TaskList>
     </Layout>
   );

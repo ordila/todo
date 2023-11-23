@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { selectItems } from "../../redux/taskSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTask, getTask } from "../../redux/api";
-
+import { IoMdClose } from "react-icons/io";
+import css from "./TaskList.module.css";
 const TaskList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -11,18 +12,24 @@ const TaskList = () => {
   const list = useSelector(selectItems);
 
   return (
-    <ul className="todo_list">
+    <ul className={css.todo_list}>
       {list.map((item) => {
         const onButtonDeleteClick = (e) => {
-          console.log("item.id :>> ", item.id);
           dispatch(deleteTask(item.id));
         };
         return (
-          <li key={item.id}>
-            <span className="priority">{item.priorityNumber}</span>
-            <span className="todo_text">{item.todoItem}</span>
-            <button onClick={onButtonDeleteClick}>Delete</button>
-          </li>
+          <div className={css.wrapper}>
+            <li className={css.list_item} key={item.id}>
+              <span className={css.priority}>{item.priorityNumber}</span>
+              <span className={css.todo_text}>{item.todoItem}</span>
+              <button
+                className={css.close_button}
+                onClick={onButtonDeleteClick}
+              >
+                <IoMdClose className={css.close_button_icon} />
+              </button>
+            </li>
+          </div>
         );
       })}
     </ul>
