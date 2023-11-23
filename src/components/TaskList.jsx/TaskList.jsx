@@ -18,7 +18,7 @@ const TaskList = () => {
           dispatch(deleteTask(item.id));
         };
         return (
-          <div className={css.wrapper}>
+          <div className={css.wrapper} key={item.id}>
             <li className={css.list_item} key={item.id}>
               <span className={css.priority}>{item.priorityNumber}</span>
               <span className={css.todo_text}>{item.todoItem}</span>

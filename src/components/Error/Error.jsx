@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectError } from "../../redux/select";
+
 import css from "./Error.module.css";
+import { selectError } from "../../redux/select";
 
 const Error = () => {
   const error = useSelector(selectError);
